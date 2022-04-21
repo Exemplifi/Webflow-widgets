@@ -25,8 +25,7 @@ Vue.component('post-item', {
 									props: ['items' ]
 									
 								});
-							  </script>
-                              <script>
+							  
 							 
 								var app = new Vue({
 									el: '#app',
