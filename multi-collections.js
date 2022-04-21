@@ -1,3 +1,27 @@
+Vue.component('post-item', {
+template: `<div class="section bg-blue py-60 wf-section">
+		<div class="container-2 w-container">
+		<div class="text-center text-blue-medium uppercase text-bold-700">Resources</div>
+		<h2 class="text-white text-center mb-48 mt-10">Moloco recent events</h2>
+		<div class="px-0"></div>
+			<div class="w-dyn-list">
+			<div role="list" class="collection-list w-dyn-items w-row">
+				<div role="listitem" class="collection-item w-dyn-item w-col w-col-4" v-for="(entry, index) in items"  v-bind:item="entry.id" v-bind:key="index">
+				<div class="bg-white">
+				<img :src= "entry.image" loading="lazy" alt="" sizes="(max-width: 444px) 87vw, (max-width: 767px) 387px, 31vw" >
+				<div class="p-20 py-12"><div class="text-14 text-blue text-bold-700 uppercase my-8">{{entry.name}}</div>
+				<p class="text-blue-medium line-height-1-3">Moloco Unveils New Campaign Setup UI for Moloco Cloud DSP</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>`,
+props: ['items' ]
+});
+							  
+
 var app = new Vue({
 	el: '#app',
 	data: {
